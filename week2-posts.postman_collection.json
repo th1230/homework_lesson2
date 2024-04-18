@@ -12,15 +12,13 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3000/posts",
-					"protocol": "http",
+					"raw": "https://homework-lesson2-duap.onrender.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"homework-lesson2-duap",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"posts"
 					]
@@ -35,7 +33,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"person1\",\r\n    \"content\": \"貼文貼文貼文貼文貼文貼文貼文貼文貼文\",\r\n    \"likes\": 20,\r\n    \"image\": \"\"\r\n}",
+					"raw": "{\r\n    \"name\": \"user123\",\r\n    \"content\": \"今天的天氣真好，希望每天都能這麼陽光普照！\",\r\n    \"likes\": 15,\r\n    \"image\": \"https://example.com/sunnyday.jpg\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -43,15 +41,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/posts",
-					"protocol": "http",
+					"raw": "https://homework-lesson2-duap.onrender.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"homework-lesson2-duap",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"posts"
 					]
@@ -66,7 +62,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"我是誰\"\r\n}",
+					"raw": "{\r\n    \"name\": \"traveler88\",\r\n    \"content\": \"剛從日本回來，東京的櫻花真的太美了！\",\r\n    \"likes\": 45,\r\n    \"image\": \"https://example.com/cherryblossoms.jpg\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -74,18 +70,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/posts/66211a0203c568328c84a827",
-					"protocol": "http",
+					"raw": "https://homework-lesson2-duap.onrender.com/posts/66212f7fda2bdb6967bee949",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"homework-lesson2-duap",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"posts",
-						"66211a0203c568328c84a827"
+						"66212f7fda2bdb6967bee949"
 					]
 				}
 			},
@@ -106,15 +100,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:3000/posts",
-					"protocol": "http",
+					"raw": "https://homework-lesson2-duap.onrender.com/posts",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"homework-lesson2-duap",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"posts"
 					]
@@ -128,18 +120,16 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://127.0.0.1:3000/posts/123",
-					"protocol": "http",
+					"raw": "https://homework-lesson2-duap.onrender.com/posts/66212f7fda2bdb6967bee949",
+					"protocol": "https",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"homework-lesson2-duap",
+						"onrender",
+						"com"
 					],
-					"port": "3000",
 					"path": [
 						"posts",
-						"123"
+						"66212f7fda2bdb6967bee949"
 					]
 				}
 			},

@@ -3,6 +3,7 @@ const headers = require("./headers");
 const handleSuccess = require("./handleSuccess");
 const handleError = require("./handleError");
 const Post = require("./modals/posts");
+const checkData = require("./validatorCheck");
 
 // 連線上資料庫
 require("./connection");
@@ -24,11 +25,14 @@ const requestListener = async (req, res) => {
     req.on("end", async () => {
       try {
         const data = JSON.parse(body);
-        if (data.name === undefined || data.name === "") {
-          return handleError(res, new Error("姓名未填寫"));
-        } else if (data.content === "" || data.content === undefined) {
-          return handleError(res, new Error("內容未填寫"));
+        if (Array.isArray(data)) {
+          for (let i = 0; i < data.length; i++) {
+            checkData(data[i]);
+          }
+        } else {
+          checkData(data);
         }
+
         const newPost = await Post.create(data);
         handleSuccess(res, newPost);
       } catch (error) {
@@ -45,18 +49,13 @@ const requestListener = async (req, res) => {
           return handleError(res, new Error("Id未填寫"));
         }
         const data = JSON.parse(body);
-        if (data.name === undefined || data.name === "") {
-          return handleError(res, new Error("姓名未填寫"));
-        } else if (data.content === "" || data.content === undefined) {
-          return handleError(res, new Error("內容未填寫"));
-        } else {
-          const post = await Post.findByIdAndUpdate(
-            id,
-            { $set: data },
-            { new: true }
-          );
-          handleSuccess(res, post);
-        }
+        checkData(data);
+        const post = await Post.findByIdAndUpdate(
+          id,
+          { $set: data },
+          { new: true }
+        );
+        handleSuccess(res, post);
       } catch (error) {
         handleError(res, error);
       }
