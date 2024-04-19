@@ -40,7 +40,7 @@ const requestListener = async (req, res) => {
       }
     });
   }
-  // 取得一則貼文
+  // 更新一則貼文
   else if (url.startsWith("/posts/") && method === "PATCH") {
     req.on("end", async () => {
       try {
