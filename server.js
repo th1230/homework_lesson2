@@ -83,6 +83,8 @@ const requestListener = async (req, res) => {
       handleError(res, new Error("沒有找到此Id的貼文"));
     }
   } else if (url === "/posts" && method === "OPTIONS") {
+    res.writeHead(200, headers);
+    res.end();
   }
   //404處理
   else {
